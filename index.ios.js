@@ -33,6 +33,7 @@ export default class debei extends Component {
           icon={require('./resources/homeUnselect.png')}
           selectedIcon={require('./resources/homeSelected.png')}
           selected={this.state.selectedTab === 'home'}
+          renderAsOriginal
           onPress={() => {
             this.setState({
               selectedTab: 'home',
@@ -46,6 +47,7 @@ export default class debei extends Component {
           icon={require('./resources/taskUnselect.png')}
           selectedIcon={require('./resources/taskSelected.png')}
           selected={this.state.selectedTab === 'task'}
+          renderAsOriginal
           onPress={() => {
             this.setState({
               selectedTab: "task"
@@ -59,6 +61,7 @@ export default class debei extends Component {
           icon={require('./resources/mineUnselect.png')}
           selectedIcon={require('./resources/mineSelected.png')}
           selected={this.state.selectedTab === 'mine'}
+          renderAsOriginal
           onPress={() => {
             this.setState({
               selectedTab: "mine"
@@ -87,5 +90,5 @@ export default class debei extends Component {
     return view;
   }
 }
-
+ 
 AppRegistry.registerComponent('debei', () => debei);
