@@ -30,8 +30,8 @@ export default class debei extends Component {
       <TabBarIOS barTintColor="#fff">
         <TabBarIOS.Item 
           title="首页"
-          icon={require('./resources/homeUnselect.png')}
-          selectedIcon={require('./resources/homeSelected.png')}
+          icon={require('./resources/tab/homeUnselect.png')}
+          selectedIcon={require('./resources/tab/homeSelected.png')}
           selected={this.state.selectedTab === 'home'}
           renderAsOriginal
           onPress={() => {
@@ -40,12 +40,12 @@ export default class debei extends Component {
             });
           }}
         >
-        <Text>首页</Text>
+        {this.initTabBar()}
         </TabBarIOS.Item>
         <TabBarIOS.Item 
           title="任务"
-          icon={require('./resources/taskUnselect.png')}
-          selectedIcon={require('./resources/taskSelected.png')}
+          icon={require('./resources/tab/taskUnselect.png')}
+          selectedIcon={require('./resources/tab/taskSelected.png')}
           selected={this.state.selectedTab === 'task'}
           renderAsOriginal
           onPress={() => {
@@ -54,12 +54,12 @@ export default class debei extends Component {
             });
           }}
         >
-        <Text>任务</Text>
+        {this.initTabBar()}
         </TabBarIOS.Item>
         <TabBarIOS.Item 
           title="我的"
-          icon={require('./resources/mineUnselect.png')}
-          selectedIcon={require('./resources/mineSelected.png')}
+          icon={require('./resources/tab/mineUnselect.png')}
+          selectedIcon={require('./resources/tab/mineSelected.png')}
           selected={this.state.selectedTab === 'mine'}
           renderAsOriginal
           onPress={() => {
@@ -68,7 +68,7 @@ export default class debei extends Component {
             });
           }}
         >
-        <Text>我的</Text>
+        {this.initTabBar()}
         </TabBarIOS.Item>
       </TabBarIOS>
     );
